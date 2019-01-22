@@ -4,7 +4,7 @@ import com.lsl.springboot.bean.Department;
 import org.apache.ibatis.annotations.*;
 
 //指定这是操作数据库的mapper
-//@Mapper
+@Mapper
 public interface DepartmentMapper {
     @Select("select * from department where id=#{id}")
     public Department getDeptById(Integer id);
